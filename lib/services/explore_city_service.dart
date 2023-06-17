@@ -48,7 +48,7 @@ class CityService {
   Future<List<City>> getCities() async {
     try {
       // Simulating an asynchronous delay
-      await Future.delayed(Duration(seconds: 2));
+      await Future.delayed(Duration(seconds: 1));
 
       List<City> cities = [];
       for (var cityData in jsonMockData) {

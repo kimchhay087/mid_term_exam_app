@@ -35,7 +35,7 @@ class PopularHotelService {
   Future<List<PopularHotel>> getPopularHotels() async {
     try {
       // Simulating an asynchronous delay
-      await Future.delayed(Duration(seconds: 2));
+      await Future.delayed(Duration(seconds: 1));
 
       List<PopularHotel> hotels = [];
       for (var hotelData in jsonMockData) {

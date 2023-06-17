@@ -69,7 +69,7 @@ class HotelService {
   Future<List<Hotel>> getHotels() async {
     try {
       // Simulating an asynchronous delay
-      await Future.delayed(Duration(seconds: 2));
+      await Future.delayed(Duration(seconds: 1));
 
       List<Hotel> hotels = [];
       for (var hotelData in jsonMockData) {
