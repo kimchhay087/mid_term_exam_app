@@ -22,9 +22,26 @@ class _SplashPageState extends State<SplashPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            SizedBox(height: 60),
-            Text('Welcome Mann Hotel',style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.white),),
-            Text('Version 1.0.0',style: TextStyle(fontSize: 16,fontWeight: FontWeight.w400,color: Colors.white),),
+            Container(
+              height: 240,
+              width: 240,
+              child: Image.asset('lib/assets/images/splash.png'),
+            ),
+            SizedBox(height: 140),
+            Text(
+              'Welcome Mann Hotel',
+              style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
+            ),
+            Text(
+              'Version 1.0.0',
+              style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.white),
+            ),
             SizedBox(height: 60),
           ],
         ),

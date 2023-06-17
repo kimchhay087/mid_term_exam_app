@@ -7,6 +7,7 @@ class BookingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0.5,
         title: Text('Booking Page',style: TextStyle(color: Colors.black),),
         centerTitle: true,
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mid_term_exam_app/widgets/buttom_widget.dart';
+import 'package:mid_term_exam_app/widgets/half_oval_image_widget.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -12,6 +13,8 @@ class WelcomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
+              HalfOvalImage(image:'lib/assets/images/welcome1.jpg' , width: 180, height: 400),
+              const SizedBox(height: 32),
               Text(
                 "Let's get started ",
                 style: TextStyle(fontSize: 32, fontWeight: FontWeight.w600),

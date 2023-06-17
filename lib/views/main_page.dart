@@ -5,6 +5,7 @@ import 'package:mid_term_exam_app/views/profile_page.dart';
 import 'package:mid_term_exam_app/views/trip_page.dart';
 import 'package:mid_term_exam_app/views/wishlist_page.dart';
 
+import '../widgets/buttom_navigationbar_widget.dart'; // Import the custom widget file
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -15,6 +16,7 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   var _currentIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,35 +30,41 @@ class _MainPageState extends State<MainPage> {
           ProfilePage(),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (bottomItemIndex){
-          setState(() {
-            _currentIndex = bottomItemIndex;
-          });
-        },
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Wishlist',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.location_city),
-            label: 'Trips',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.book_online),
-            label: 'Booking',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
+      bottomNavigationBar: Container(
+        height: 70,
+        child: CustomBottomNavigationBar(
+          currentIndex: _currentIndex,
+          items: [
+            CustomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            CustomNavigationBarItem(
+              icon: Icon(Icons.favorite),
+              label: 'Wishlist',
+            ),
+            CustomNavigationBarItem(
+              icon: Icon(Icons.location_city),
+              label: 'Trips',
+            ),
+            CustomNavigationBarItem(
+              icon: Icon(Icons.book_online),
+              label: 'Booking',
+            ),
+            CustomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Profile',
+            ),
+          ],
+          onTap: (bottomItemIndex) {
+            setState(() {
+              _currentIndex = bottomItemIndex;
+            });
+          },
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.grey,
+          backgroundColor: Colors.white,
+        ),
       ),
     );
   }

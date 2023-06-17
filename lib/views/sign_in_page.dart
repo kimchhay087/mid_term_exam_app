@@ -10,7 +10,7 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0.5,
+        elevation: 0,
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
@@ -22,69 +22,73 @@ class SignInPage extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 32),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Welcome Back",
-              style: TextStyle(fontSize: 36, fontWeight: FontWeight.w600),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              'Sign In with your email and',
-              style: TextStyle(fontSize: 20, color: Colors.grey),
-            ),
-            Text(
-              'password',
-              style: TextStyle(fontSize: 20, color: Colors.grey),
-            ),
-            const SizedBox(height: 26),
-            TextFormFieldWidget(
-              isPassword: false,
-              hintText: 'Enter your email here',
-              labelText: 'Email',
-              validator: (value) {
-                if (value != null && value.isEmpty) {
-                  return 'Email is required';
-                } else {
-                  return null;
-                }
-              },
-            ),
-            const SizedBox(height: 16),
-            TextFormFieldWidget(
-              isPassword: true,
-              hintText: 'Enter your password here',
-              labelText: 'Password',
-              validator: (value) {
-                if (value != null && value.isEmpty) {
-                  return 'Password is required';
-                } else {
-                  return null;
-                }
-              },
-            ),
-            const SizedBox(height: 16),
-            ButtonWidget(backgroundColor:
-            MaterialStateProperty.all<Color>(Colors.green),
-                title: 'Sign In',
-                onPressed: () {
-                  Navigator.of(context).pushNamed('/main');
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 32),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Welcome Back",
+                style: TextStyle(fontSize: 36, fontWeight: FontWeight.w600),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Sign In with your email and',
+                style: TextStyle(fontSize: 20, color: Colors.grey),
+              ),
+              Text(
+                'password',
+                style: TextStyle(fontSize: 20, color: Colors.grey),
+              ),
+              const SizedBox(height: 26),
+              TextFormFieldWidget(
+                inputBorder: OutlineInputBorder(),
+                isPassword: false,
+                hintText: 'Enter your email here',
+                labelText: 'Email',
+                validator: (value) {
+                  if (value != null && value.isEmpty) {
+                    return 'Email is required';
+                  } else {
+                    return null;
+                  }
                 },
-                borderColor: Colors.green),
-            Center(
-              child: TextButton(
+              ),
+              const SizedBox(height: 16),
+              TextFormFieldWidget(
+                inputBorder: OutlineInputBorder(),
+                isPassword: true,
+                hintText: 'Enter your password here',
+                labelText: 'Password',
+                validator: (value) {
+                  if (value != null && value.isEmpty) {
+                    return 'Password is required';
+                  } else {
+                    return null;
+                  }
+                },
+              ),
+              const SizedBox(height: 16),
+              ButtonWidget(backgroundColor:
+              MaterialStateProperty.all<Color>(Colors.green),
+                  title: 'Sign In',
                   onPressed: () {
-                    Navigator.of(context).pushNamed('/forgetpassword');
+                    Navigator.of(context).pushNamed('/main');
                   },
-                  child: Text(
-                    'Forget password',
-                    style: TextStyle(color: Colors.grey,fontSize: 16),
-                  )),
-            ),
-          ],
+                  borderColor: Colors.green),
+              Center(
+                child: TextButton(
+                    onPressed: () {
+                      Navigator.of(context).pushReplacementNamed('/forgetpassword');
+                    },
+                    child: Text(
+                      'Forget password',
+                      style: TextStyle(color: Colors.grey,fontSize: 16),
+                    )),
+              ),
+            ],
+          ),
         ),
       ),
     );

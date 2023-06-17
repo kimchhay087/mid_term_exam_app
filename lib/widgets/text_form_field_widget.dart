@@ -9,7 +9,8 @@ class TextFormFieldWidget extends StatefulWidget {
     this.controller,
     required this.isPassword,
     this.borderColor,
-    this.validator
+    this.validator,
+    this.inputBorder, this.fillColor,
   }) : super(key: key);
 
   final String? labelText;
@@ -19,6 +20,8 @@ class TextFormFieldWidget extends StatefulWidget {
   final bool isPassword;
   final Color? borderColor;
   final String? Function(String?)? validator;
+  final InputBorder? inputBorder;
+  final Color? fillColor;
 
   @override
   State<TextFormFieldWidget> createState() => _TextFormFieldWidgetState();
@@ -30,35 +33,35 @@ class _TextFormFieldWidgetState extends State<TextFormFieldWidget> {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    return TextFormField(
-      controller: widget.controller,
-      decoration: InputDecoration(
-        border: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: widget.borderColor ?? colorScheme.primary,
+    return Container(
+      height: 60.0,
+      child: TextFormField(
+        controller: widget.controller,
+        decoration: InputDecoration(
+          filled: true,
+          fillColor: widget.fillColor,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16.0),
+            borderSide: BorderSide.none,
           ),
+          focusedBorder: widget.inputBorder,
+          labelText: widget.labelText,
+          hintText: widget.hintText,
+          prefixIcon: widget.prefixIcon,
+          suffixIcon: widget.isPassword
+              ? IconButton(
+            icon: Icon(_obscureText ? Icons.visibility_off : Icons.visibility),
+            onPressed: () {
+              setState(() {
+                _obscureText = !_obscureText;
+              });
+            },
+          )
+              : null,
         ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(
-            color: widget.borderColor ?? colorScheme.primary,
-          ),
-        ),
-        labelText: widget.labelText,
-        hintText: widget.hintText,
-        prefixIcon: widget.prefixIcon,
-        suffixIcon: widget.isPassword
-            ? IconButton(
-          icon: Icon(_obscureText ? Icons.visibility_off : Icons.visibility),
-          onPressed: () {
-            setState(() {
-              _obscureText = !_obscureText;
-            });
-          },
-        )
-            : null,
+        obscureText: widget.isPassword ? _obscureText : false,
+        validator: widget.validator,
       ),
-      obscureText: widget.isPassword ? _obscureText : false,
-      validator:widget.validator
     );
   }
 }

@@ -7,21 +7,16 @@ void main(){
 
 
 class RootApp extends StatelessWidget {
-  const RootApp({super.key});
+  const RootApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       onGenerateRoute: appRoute,
       theme: ThemeData(
-        bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          selectedItemColor: Colors.black,
-          unselectedItemColor: Colors.grey,
-          backgroundColor: Colors.black,
-        ),
         appBarTheme: AppBarTheme(
-          backgroundColor: Colors.white
-        )
+          backgroundColor: Colors.white,
+        ),
       ),
     );
   }

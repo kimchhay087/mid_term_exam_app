@@ -59,9 +59,36 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  #assets:
-  #    - images/splash.jpg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - lib/assets/images/splash.png
+    - lib/assets/images/location.png
+    - lib/assets/images/dubai.jpg
+    - lib/assets/images/hong_kong.jpg
+    - lib/assets/images/angkor_wat.jpg
+    - lib/assets/images/new_york.jpg
+    - lib/assets/images/jakarta.jpg
+    - lib/assets/images/mumbai.jpg
+    - lib/assets/images/sydney.jpg
+    - lib/assets/images/kuala_lumpurc.jpg
+    - lib/assets/images/shanghai.jpg
+    - lib/assets/images/astor_house_hotel.jpg
+    - lib/assets/images/crowne_plaza_hong_kong_kow_loon_wast.jpg
+    - lib/assets/images/edison.jpg
+    - lib/assets/images/harris_vertu_hotel.jpg
+    - lib/assets/images/lalit_mumbai.jpg
+    - lib/assets/images/palm_boutique_hotel_and_resturant.jpg
+    - lib/assets/images/parkroyal_collection_kuala_lumpur.jpg
+    - lib/assets/images/sokha_hotel_and_resort.jpg
+    - lib/assets/images/sydney_hotel.jpg
+    - lib/assets/images/the_peninsula_hong_kong.jpg
+    - lib/assets/images/cambodia_tian_ti_international_hotel.jpg
+    - lib/assets/images/hong_kong_ocean_park_marriott_hotel.jpg
+    - lib/assets/images/jw_marriott_mumbai_sahar.jpg
+    - lib/assets/images/warwick_new_york.jpg
+    - lib/assets/images/welcome.jpg
+    - lib/assets/images/welcome1.jpg
+    - lib/assets/images/profile.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
