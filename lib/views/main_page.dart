@@ -23,10 +23,10 @@ class _MainPageState extends State<MainPage> {
       body: IndexedStack(
         index: _currentIndex,
         children: [
-          HomePage(),
-          WishListPage(),
-          TripPage(),
-          BookingPage(),
+          const HomePage(),
+          const WishListPage(),
+          const TripPage(),
+          const BookingPage(),
           ProfilePage(),
         ],
       ),
@@ -36,23 +36,23 @@ class _MainPageState extends State<MainPage> {
           currentIndex: _currentIndex,
           items: [
             CustomNavigationBarItem(
-              icon: Icon(Icons.home),
+              icon:const Icon(Icons.home),
               label: 'Home',
             ),
             CustomNavigationBarItem(
-              icon: Icon(Icons.favorite),
+              icon:const Icon(Icons.favorite),
               label: 'Wishlist',
             ),
             CustomNavigationBarItem(
-              icon: Icon(Icons.location_city),
+              icon:const Icon(Icons.location_city),
               label: 'Trips',
             ),
             CustomNavigationBarItem(
-              icon: Icon(Icons.book_online),
+              icon:const Icon(Icons.book_online),
               label: 'Booking',
             ),
             CustomNavigationBarItem(
-              icon: Icon(Icons.person),
+              icon:const Icon(Icons.person),
               label: 'Profile',
             ),
           ],

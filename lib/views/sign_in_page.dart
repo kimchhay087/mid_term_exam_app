@@ -16,7 +16,7 @@ class SignInPage extends StatelessWidget {
           onPressed: () {
             Navigator.of(context).pop();
           },
-          icon: Icon(
+          icon:const Icon(
             Icons.arrow_back,
             color: Colors.black,
           ),
@@ -24,26 +24,26 @@ class SignInPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 32),
+          padding:const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 "Welcome Back",
                 style: TextStyle(fontSize: 36, fontWeight: FontWeight.w600),
               ),
               const SizedBox(height: 8),
-              Text(
+              const Text(
                 'Sign In with your email and',
                 style: TextStyle(fontSize: 20, color: Colors.grey),
               ),
-              Text(
+              const Text(
                 'password',
                 style: TextStyle(fontSize: 20, color: Colors.grey),
               ),
               const SizedBox(height: 26),
               TextFormFieldWidget(
-                inputBorder: OutlineInputBorder(),
+                inputBorder:const OutlineInputBorder(),
                 isPassword: false,
                 hintText: 'Enter your email here',
                 labelText: 'Email',
@@ -57,7 +57,7 @@ class SignInPage extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               TextFormFieldWidget(
-                inputBorder: OutlineInputBorder(),
+                inputBorder:const OutlineInputBorder(),
                 isPassword: true,
                 hintText: 'Enter your password here',
                 labelText: 'Password',
@@ -82,7 +82,7 @@ class SignInPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.of(context).pushReplacementNamed('/forgetpassword');
                     },
-                    child: Text(
+                    child:const Text(
                       'Forget password',
                       style: TextStyle(color: Colors.grey,fontSize: 16),
                     )),

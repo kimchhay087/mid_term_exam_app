@@ -13,18 +13,18 @@ class WelcomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              HalfOvalImage(image:'lib/assets/images/welcome1.jpg' , width: 180, height: 400),
+              const HalfOvalImage(image:'lib/assets/images/welcome1.jpg' , width: 180, height: 400),
               const SizedBox(height: 32),
-              Text(
+              const Text(
                 "Let's get started ",
                 style: TextStyle(fontSize: 32, fontWeight: FontWeight.w600),
               ),
               const SizedBox(height: 8),
-              Text(
+              const Text(
                 'Login to your acc below or signup',
                 style: TextStyle(fontSize: 16, color: Colors.grey),
               ),
-              Text(
+              const Text(
                 'for an amazing experience',
                 style: TextStyle(fontSize: 16, color: Colors.grey),
               ),
@@ -41,12 +41,12 @@ class WelcomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Already have account?'),
+                  const Text('Already have account?'),
                   TextButton(
                       onPressed: () {
                         Navigator.of(context).pushNamed('/signin');
                       },
-                      child: Text(
+                      child:const Text(
                         'Log In',
                         style: TextStyle(color: Colors.green),
                       )),

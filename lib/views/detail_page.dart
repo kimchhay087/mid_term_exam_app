@@ -26,7 +26,7 @@ class DetailPage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back,
             color: Colors.black,
           ),
@@ -36,7 +36,7 @@ class DetailPage extends StatelessWidget {
         ),
         title: Text(
           name,
-          style: TextStyle(color: Colors.black),
+          style: const TextStyle(color: Colors.black),
         ),
       ),
       body: Center(
@@ -45,7 +45,7 @@ class DetailPage extends StatelessWidget {
             Expanded(
               flex: 4,
               child: Container(
-                padding: EdgeInsets.all(4),
+                padding:const  EdgeInsets.all(4),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(16),
                   child: Image.asset(
@@ -57,9 +57,9 @@ class DetailPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 16),
+              padding:const  EdgeInsets.symmetric(horizontal: 16),
               alignment: Alignment.topLeft,
               child: Text(
                 name,
@@ -67,29 +67,29 @@ class DetailPage extends StatelessWidget {
               ),
             ),
 
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Expanded(
               flex: 3,
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16),
+                padding:const  EdgeInsets.symmetric(horizontal: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Description: $description',style: TextStyle(fontWeight: FontWeight.w400),),
-                    SizedBox(height: 8),
+                    Text('Description: $description',style:const TextStyle(fontWeight: FontWeight.w400),),
+                    const SizedBox(height: 8),
                     Row(
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.pin_drop_sharp,
                           color: Colors.red,
                         ),
                         Text('Distance: $distance'),
                       ],
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     Row(
                       children: [
-                        Icon(
+                        const Icon(
                           Icons.star,
                           color: Colors.amber,
                         ),
@@ -103,11 +103,11 @@ class DetailPage extends StatelessWidget {
             Expanded(
               flex: 4,
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
+                    const Row(
                       children: [
                         Text(
                           'Room Types',

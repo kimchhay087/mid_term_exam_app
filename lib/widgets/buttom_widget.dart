@@ -17,7 +17,7 @@ class ButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 46),
+      margin:const EdgeInsets.symmetric(horizontal: 46),
       width: double.infinity,
       height: 50,
       child: ElevatedButton(

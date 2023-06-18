@@ -85,7 +85,7 @@ class RecommendHotelCard extends StatelessWidget {
                     children: [
                       Text(
                         name,
-                        style: TextStyle(
+                        style:const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w600,
                           color: Colors.black,
@@ -97,13 +97,13 @@ class RecommendHotelCard extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.pin_drop_sharp,
                                 color: Colors.red,
                               ),
                               Text(
                                 distance,
-                                style: TextStyle(
+                                style:const TextStyle(
                                   fontSize: 16,
                                   color: Colors.grey,
                                 ),
@@ -114,12 +114,12 @@ class RecommendHotelCard extends StatelessWidget {
                             children: [
                               Text(
                                 rating,
-                                style: TextStyle(
+                                style:const TextStyle(
                                   fontSize: 16,
                                   color: Colors.grey,
                                 ),
                               ),
-                              Icon(
+                              const Icon(
                                 Icons.star,
                                 color: Colors.amber,
                               ),

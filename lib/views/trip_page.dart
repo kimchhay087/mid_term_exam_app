@@ -8,13 +8,13 @@ class TripPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.8,
-        title: Text(
+        title:const Text(
           'Trips',
           style: TextStyle(color: Colors.black),
         ),
         centerTitle: true,
       ),
-      body: Center(
+      body:const Center(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

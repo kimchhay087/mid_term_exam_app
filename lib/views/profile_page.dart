@@ -9,7 +9,7 @@ class ProfilePage extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(
+              const Center(
                 child: Text(
                   'Profile',
                   style: TextStyle(
@@ -19,8 +19,8 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 16),
-              Center(
+              const SizedBox(height: 16),
+              const Center(
                 child: ClipOval(
                   child: CircleAvatar(
                     backgroundColor: Colors.white,
@@ -30,140 +30,140 @@ class ProfilePage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 16),
-              Center(
+              const SizedBox(height: 16),
+              const Center(
                 child: Text(
                   'Kimmchay Try',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
               ),
               SizedBox(height: 8),
-              Center(
+              const Center(
                 child: Text(
                   'kimchhay007@gmail.com',
                   style: TextStyle(fontSize: 16, color: Colors.grey),
                 ),
               ),
-              SizedBox(height: 32),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
+              const SizedBox(height: 32),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24),
                 child: Text(
                   'Account Setting',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                 ),
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               ListTile(
-                leading: Icon(
+                leading:const Icon(
                   Icons.edit_note_rounded,
                   color: Colors.orange,
                 ),
-                title: Text('Edit Profile'),
+                title:const Text('Edit Profile'),
                 onTap: () {
                   // Navigate to the account settings page
                 },
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               ListTile(
-                leading: Icon(
+                leading:const Icon(
                   Icons.wallet,
                   color: Colors.green,
                 ),
-                title: Text('Payment'),
+                title:const Text('Payment'),
                 onTap: () {
                   // Navigate to the account settings page
                 },
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               ListTile(
-                leading: Icon(
+                leading:const Icon(
                   Icons.notifications,
                   color: Colors.red,
                 ),
-                title: Text('Notification'),
+                title:const Text('Notification'),
                 onTap: () {
                   Navigator.of(context).pushNamed('/notification');
                 },
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               ListTile(
-                leading: Icon(
+                leading:const Icon(
                   Icons.font_download_outlined,
                   color: Colors.purple,
                 ),
-                title: Text('Lanuague'),
+                title:const Text('Lanuague'),
                 onTap: () {
                   // Navigate to the account settings page
                 },
               ),
-              SizedBox(height: 24),
-              Padding(
+              const SizedBox(height: 24),
+              const Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Text(
                   'Support',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                 ),
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               ListTile(
-                leading: Icon(
+                leading:const Icon(
                   Icons.message,
                   color: Colors.blue,
                 ),
-                title: Text('Message'),
+                title:const Text('Message'),
                 onTap: () {
                   // Navigate to the account settings page
                 },
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               ListTile(
-                leading: Icon(
+                leading:const Icon(
                   Icons.feedback,
                   color: Colors.cyan,
                 ),
-                title: Text('Give Us Feedback'),
+                title:const Text('Give Us Feedback'),
                 onTap: () {
                   // Navigate to the account settings page
                 },
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               ListTile(
-                leading: Icon(
+                leading:const Icon(
                   Icons.bookmarks,
                   color: Colors.pink,
                 ),
-                title: Text('Terms of Service'),
+                title:const Text('Terms of Service'),
                 onTap: () {
                   // Navigate to the account settings page
                 },
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               ListTile(
-                leading: Icon(
+                leading:const Icon(
                   Icons.question_mark,
                   color: Colors.yellow,
                 ),
-                title: Text('About'),
+                title:const Text('About'),
                 onTap: () {
                   // Navigate to the account settings page
                 },
               ),
-              SizedBox(height: 4),
+              const SizedBox(height: 4),
               ListTile(
-                leading: Icon(
+                leading:const Icon(
                   Icons.login_outlined,
                   color: Colors.deepOrange,
                 ),
-                title: Text('Log Out'),
+                title:const Text('Log Out'),
                 onTap: () {
                   Navigator.of(context).pushReplacementNamed('/signin');
                 },
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Container(
-                  padding: EdgeInsets.symmetric(horizontal: 16),
-                  child:Text('Version 1.0.0')),
-              SizedBox(height: 8),
+                  padding:const EdgeInsets.symmetric(horizontal: 16),
+                  child:const Text('Version 1.0.0')),
+              const SizedBox(height: 8),
             ],
           ),
         ),

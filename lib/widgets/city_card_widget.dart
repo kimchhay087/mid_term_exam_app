@@ -12,7 +12,7 @@ class CityCardWidget extends StatelessWidget {
     return Column(
       children: [
         Container(
-          padding: EdgeInsets.all(8),
+          padding:const EdgeInsets.all(8),
           child: ClipOval(
             child: CircleAvatar(
               radius: 50, // Adjust the radius as needed

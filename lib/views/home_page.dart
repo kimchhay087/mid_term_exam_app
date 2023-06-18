@@ -36,14 +36,14 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: ClipOval(
+        leading:const ClipOval(
           child: CircleAvatar(
             backgroundColor: Colors.white,
             radius: 80, // Adjust the radius as needed
             backgroundImage: AssetImage('lib/assets/images/profile.png'),
           ),
         ),
-        title: Column(
+        title:const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               Navigator.of(context).pushNamed('/notification');
             },
-            icon: Icon(
+            icon:const Icon(
               Icons.notifications_none_sharp,
               color: Colors.black,
             ),
@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          padding:const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -78,24 +78,24 @@ class _HomePageState extends State<HomePage> {
                 fillColor: Colors.green.withOpacity(0.2),
                 inputBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(16),
-                  borderSide: BorderSide(color: Colors.transparent),
+                  borderSide:const BorderSide(color: Colors.transparent),
                 ),
                 isPassword: false,
                 hintText: 'Search for hotel',
-                prefixIcon: Icon(Icons.search),
+                prefixIcon:const Icon(Icons.search),
                 borderColor: Colors.transparent,
               ),
-              SizedBox(height: 16),
-              Text(
+              const SizedBox(height: 16),
+              const Text(
                 'Explore City',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               FutureBuilder<List<City>>(
                 future: _cityService.getCities(),
                 builder: (context, snapshot) {
                   if (snapshot.connectionState == ConnectionState.waiting) {
-                    return CircularProgressIndicator();
+                    return const CircularProgressIndicator();
                   } else if (snapshot.hasError) {
                     return Text('Error: ${snapshot.error}');
                   } else if (snapshot.hasData) {
@@ -111,16 +111,16 @@ class _HomePageState extends State<HomePage> {
                       ),
                     );
                   } else {
-                    return Text('No data available');
+                    return const Text('No data available');
                   }
                 },
               ),
-              SizedBox(height: 16),
-              Text(
+              const SizedBox(height: 16),
+              const Text(
                 'Recommend Hotels',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               FutureBuilder<List<Hotel>>(
                 future: _hotelService.getHotels(),
                 builder: (context, snapshot) {
@@ -143,28 +143,28 @@ class _HomePageState extends State<HomePage> {
                   } else if (snapshot.hasError) {
                     return Text('Error: ${snapshot.error}');
                   } else {
-                    return CircularProgressIndicator();
+                    return const CircularProgressIndicator();
                   }
                 },
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     'Popular Hotels',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                   ),
                   TextButton(
                     onPressed: () {},
-                    child: Text(
+                    child:const Text(
                       'See more',
                       style: TextStyle(color: Colors.grey),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
               FutureBuilder<List<PopularHotel>>(
                 future: _popularHotelService.getPopularHotels(),
                 builder: (context, snapshot) {
@@ -186,7 +186,7 @@ class _HomePageState extends State<HomePage> {
                   } else if (snapshot.hasError) {
                     return Text('Error: ${snapshot.error}');
                   } else {
-                    return CircularProgressIndicator();
+                    return const CircularProgressIndicator();
                   }
                 },
               ),

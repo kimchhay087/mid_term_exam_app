@@ -9,7 +9,7 @@ class NotificationPage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0.8,
         leading: IconButton(
-          icon: Icon(
+          icon:const Icon(
             Icons.arrow_back,
             color: Colors.black,
           ),
@@ -17,12 +17,12 @@ class NotificationPage extends StatelessWidget {
             Navigator.of(context).pop();
           },
         ),
-        title: Text(
+        title:const Text(
           'Notifications',
           style: TextStyle(color: Colors.black),
         ),
       ),
-      body: Center(
+      body:const Center(
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

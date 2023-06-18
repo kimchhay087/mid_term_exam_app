@@ -45,7 +45,7 @@ class PopularHotelCard extends StatelessWidget {
                   children: [
                     Text(
                       name,
-                      style: TextStyle(
+                      style:const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w600,
                         color: Colors.black,
@@ -58,17 +58,17 @@ class PopularHotelCard extends StatelessWidget {
                         SizedBox(width: 4),
                         Text(
                           distance,
-                          style: TextStyle(
+                          style:const TextStyle(
                             fontSize: 16,
                             color: Colors.grey,
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
                     Text(
                       'Start from \$$price per night',
-                      style: TextStyle(
+                      style:const TextStyle(
                         fontSize: 16,
                         color: Colors.grey,
                       ),

@@ -16,7 +16,7 @@ class SignUpPage extends StatelessWidget {
           onPressed: () {
             Navigator.of(context).pop();
           },
-          icon: Icon(
+          icon:const Icon(
             Icons.arrow_back,
             color: Colors.black,
           ),
@@ -24,26 +24,26 @@ class SignUpPage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 32),
+          padding:const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 "Create an account",
                 style: TextStyle(fontSize: 36, fontWeight: FontWeight.w600),
               ),
               const SizedBox(height: 8),
-              Text(
+              const Text(
                 "Let's us know what your name, email,",
                 style: TextStyle(fontSize: 20, color: Colors.grey),
               ),
-              Text(
+              const Text(
                 'and you password',
                 style: TextStyle(fontSize: 20, color: Colors.grey),
               ),
               const SizedBox(height: 26),
               TextFormFieldWidget(
-                inputBorder: OutlineInputBorder(),
+                inputBorder:const OutlineInputBorder(),
                 isPassword: false,
                 hintText: 'Enter your full name here',
                 labelText: 'Full name',
@@ -57,7 +57,7 @@ class SignUpPage extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               TextFormFieldWidget(
-                inputBorder: OutlineInputBorder(),
+                inputBorder:const OutlineInputBorder(),
                 isPassword: false,
                 hintText: 'Enter your email here',
                 labelText: 'Email',
@@ -71,7 +71,7 @@ class SignUpPage extends StatelessWidget {
               ),
               const SizedBox(height: 16),
               TextFormFieldWidget(
-                inputBorder: OutlineInputBorder(),
+                inputBorder:const OutlineInputBorder(),
                 isPassword: true,
                 hintText: 'Enter your password here',
                 labelText: 'Password',
