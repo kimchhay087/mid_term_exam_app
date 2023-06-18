@@ -82,7 +82,7 @@ class ProfilePage extends StatelessWidget {
                 ),
                 title: Text('Notification'),
                 onTap: () {
-                  // Navigate to the account settings page
+                  Navigator.of(context).pushNamed('/notification');
                 },
               ),
               SizedBox(height: 4),
@@ -159,6 +159,11 @@ class ProfilePage extends StatelessWidget {
                   Navigator.of(context).pushReplacementNamed('/signin');
                 },
               ),
+              SizedBox(height: 16),
+              Container(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child:Text('Version 1.0.0')),
+              SizedBox(height: 8),
             ],
           ),
         ),

@@ -29,7 +29,7 @@ class _SplashPageState extends State<SplashPage> {
             ),
             SizedBox(height: 140),
             Text(
-              'Welcome Mann Hotel',
+              'Welcome CW App',
               style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,

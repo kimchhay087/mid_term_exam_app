@@ -36,18 +36,19 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: IconButton(
-          icon: Icon(
-            Icons.person,
-            color: Colors.black,
+        leading: ClipOval(
+          child: CircleAvatar(
+            backgroundColor: Colors.white,
+            radius: 80, // Adjust the radius as needed
+            backgroundImage:
+            AssetImage('lib/assets/images/profile.png'),
           ),
-          onPressed: () {},
         ),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Hello, Chhay',
+              'Hello, Kimchhay Try',
               style: TextStyle(color: Colors.grey, fontSize: 18),
             ),
             Text(
@@ -58,9 +59,11 @@ class _HomePageState extends State<HomePage> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed('/notification');
+            },
             icon: Icon(
-              Icons.notifications,
+              Icons.notifications_none_sharp,
               color: Colors.black,
             ),
           )

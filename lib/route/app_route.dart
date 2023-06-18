@@ -3,6 +3,7 @@ import 'package:mid_term_exam_app/views/booking_page.dart';
 import 'package:mid_term_exam_app/views/forget_password_page.dart';
 import 'package:mid_term_exam_app/views/home_page.dart';
 import 'package:mid_term_exam_app/views/main_page.dart';
+import 'package:mid_term_exam_app/views/notification_page.dart';
 import 'package:mid_term_exam_app/views/profile_page.dart';
 import 'package:mid_term_exam_app/views/sign_in_page.dart';
 import 'package:mid_term_exam_app/views/sign_up_page.dart';
@@ -31,6 +32,8 @@ Route<dynamic> appRoute(settings){
       return MaterialPageRoute(builder: (context)=> ForgetPasswordPage());
     case '/trip':
       return MaterialPageRoute(builder: (context)=> TripPage());
+    case '/notification':
+      return MaterialPageRoute(builder: (context)=> NotificationPage());
     case '/booking':
       return MaterialPageRoute(builder: (context)=> BookingPage());
     case '/profile':

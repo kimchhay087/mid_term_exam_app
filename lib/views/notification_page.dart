@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
 
-class TripPage extends StatelessWidget {
-  const TripPage({Key? key});
+class NotificationPage extends StatelessWidget {
+  const NotificationPage({Key? key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0.8,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
         title: Text(
-          'Trips',
+          'Notifications',
           style: TextStyle(color: Colors.black),
         ),
-        centerTitle: true,
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -20,13 +28,13 @@ class TripPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(
-                Icons.airplanemode_active_rounded,
+                Icons.list,
                 size: 64,
                 color: Colors.grey,
               ),
               SizedBox(height: 16),
               Text(
-                'No Trip',
+                'No Data',
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.grey,
