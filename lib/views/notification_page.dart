@@ -34,7 +34,7 @@ class NotificationPage extends StatelessWidget {
               ),
               SizedBox(height: 16),
               Text(
-                'No Data',
+                'No Notification',
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.grey,
