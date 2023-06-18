@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mid_term_exam_app/models/recommend_hotel_model.dart';
 
 import '../views/detail_page.dart';
 
@@ -9,12 +10,16 @@ class RecommendHotelCard extends StatelessWidget {
     required this.name,
     required this.distance,
     required this.rating,
+    required this.description,
+    required this.rooms,
   }) : super(key: key);
 
   final String image;
   final String name;
   final String distance;
   final String rating;
+  final String description;
+  final List<Room> rooms;
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +33,8 @@ class RecommendHotelCard extends StatelessWidget {
               name: name,
               distance: distance,
               rating: rating,
+              description: description,
+              rooms: rooms,
             ),
           ),
         );

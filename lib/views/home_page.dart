@@ -40,8 +40,7 @@ class _HomePageState extends State<HomePage> {
           child: CircleAvatar(
             backgroundColor: Colors.white,
             radius: 80, // Adjust the radius as needed
-            backgroundImage:
-            AssetImage('lib/assets/images/profile.png'),
+            backgroundImage: AssetImage('lib/assets/images/profile.png'),
           ),
         ),
         title: Column(
@@ -135,6 +134,8 @@ class _HomePageState extends State<HomePage> {
                             image: hotel.image,
                             distance: hotel.distance,
                             rating: hotel.rating.toString(),
+                            description: hotel.description,
+                            rooms: hotel.rooms,
                           );
                         }).toList(),
                       ),
@@ -154,7 +155,13 @@ class _HomePageState extends State<HomePage> {
                     'Popular Hotels',
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
                   ),
-                  TextButton(onPressed: (){}, child:Text('See more',style: TextStyle(color: Colors.grey),))
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'See more',
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  ),
                 ],
               ),
               SizedBox(height: 16),
