@@ -14,7 +14,7 @@ class SignUpPage extends StatelessWidget {
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
-            Navigator.of(context).pop();
+            Navigator.of(context).pushReplacementNamed('/welcome');
           },
           icon:const Icon(
             Icons.arrow_back,
